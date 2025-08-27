@@ -15,3 +15,14 @@ const calcularFactorial = (n) => {
 
 console.log(calcularFactorial(7)) //llamada a la funcion por consola
 
+const calcularPotencia = (base, exponente) => {
+    let total = base // inicializo el total con la base y empiezo el bucle for desde el 2 para ahorrar una iteracion
+    for (let i = 2 ; i <= exponente; i++){  // si lo hiciera con total = 1 e i = 1 solo estaria haciendo el producto redundante de 1 * base
+        total *= base  //total = total * base, en el caso 2 a la 3 seria como 2 * 2, 2 * 3 y ya termina con solo esas 2 cuentas
+    }
+    return total
+}
+// llamadas por consola a la funcion
+console.log(calcularPotencia(2,3))
+console.log(calcularPotencia(5,4))
+console.log(calcularPotencia(3,6))
