@@ -1,0 +1,53 @@
+body {
+      font-family: sans-serif;
+      display: flex;
+      gap: 40px;
+      padding: 20px;
+    }
+
+.container {
+    width: 200px;
+    border: 2px dashed #aaa;
+    padding: 10px;
+}
+
+.item {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #f0f0f0;
+    cursor: grab;
+    border: 1px solid #ccc;
+}
+
+.destino {
+    flex: 1;
+    min-height: 300px;
+    border: 2px dashed #0077cc;
+    padding: 10px;
+    background-color: #e6f2ff;
+}
+
+
+.destino.over{
+    background-color: #cce5ff;     
+    border-color: #3399ff;         
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+}
+
+.historial {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #ccc;
+}
+
+.historial ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.historial li {
+  padding: 6px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}

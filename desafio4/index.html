@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item" draggable="true" id="item1">item 1</div>
+        <div class="item" draggable="true" id="item2">item 2</div>
+        <div class="item" draggable="true" id="item3">item 3</div>
+    </div>
+
+    <div class="destino" id="areaDestino">
+        <!-- aca se crearan los clones de los draggables de arriba -->
+    </div>
+
+    <div class="historial">
+        <h3>Historial de items dropeados</h3>
+        <ul id="listaHistorial">
+            <!-- aca renderizaran luego los items del local storage -->
+        </ul>
+    </div>
+    <button onclick="localStorage.clear(); location.reload();">Borrar todo</button>
+    <script src="script.js"></script>
+</body>
+</html>
