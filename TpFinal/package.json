@@ -1,0 +1,12 @@
+{
+  "name": "tpfinal",
+  "version": "1.0.0",
+  "description": "tp final js/ts avanzado",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc"
+  },
+  "author": "luca nahuel moreno",
+  "license": "ISC"
+}
