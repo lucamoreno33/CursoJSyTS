@@ -1,22 +1,5 @@
-const items = document.querySelectorAll('.item'); //guardo todos los items con la clase item
+const items = document.querySelectorAll('.user-card'); //guardo todos los items con la clase item
 const destino = document.getElementById('areaDestino'); //guardo el area de drop tomado su id
-
-items.forEach(item => { //como items es una lista con todos los items la itero con forEach
-    item.addEventListener('dragstart', e => { //hago que escuche al evento dragstart que es cuando agarro los elemntos, para que me devuelvan su id
-        e.dataTransfer.setData('text/plain', e.target.id); //manejo los datos y con set data los contengo en texto plano
-        console.log(e.dataTransfer.getData('text/plain')) // ahora con getData obtengo ese id del setData y lo muestro en consola
-    });
-});
-
-destino.addEventListener('dragover', e => { //escucho al evento dragover que es cuando un elemento esta encima de otro
-    e.preventDefault(); // el navegador por defecto no permite que se suelten objetos sobre otros asi que aca y en drop uso preventDefault
-    destino.classList.add('over'); // agrego la clase over para que tenga mas feedback visual
-});
-
-destino.addEventListener('dragleave', () => { // escucho cuando se va el elemento de arriba del otro asi le quita la clase
-    destino.classList.remove('over');          // que le agregue arriba en el over
-});
-
 
 const RenderHistorial = () =>{
     const lista = document.getElementById('listaHistorial'); //guardo la ul que renderizara los li dentro suyo
@@ -31,6 +14,31 @@ const RenderHistorial = () =>{
 }
 
 window.addEventListener('DOMContentLoaded', RenderHistorial); //Se ejecuta al cargar el DOM
+
+
+
+
+items.forEach(item => { //como items es una lista con todos los items la itero con forEach
+    
+    item.addEventListener('dragstart', e => { //hago que escuche al evento dragstart que es cuando agarro los elemntos, para que me devuelvan su id
+        e.dataTransfer.setData('text/plain', e.target.id); //manejo los datos y con set data los contengo en texto plano
+        console.log(e.dataTransfer.getData('text/plain')) // ahora con getData obtengo ese id del setData y lo muestro en consola
+        
+    });
+    
+});
+
+destino.addEventListener('dragover', e => { //escucho al evento dragover que es cuando un elemento esta encima de otro
+    e.preventDefault(); // el navegador por defecto no permite que se suelten objetos sobre otros asi que aca y en drop uso preventDefault
+    destino.classList.add('over'); // agrego la clase over para que tenga mas feedback visual
+});
+
+destino.addEventListener('dragleave', () => { // escucho cuando se va el elemento de arriba del otro asi le quita la clase
+    destino.classList.remove('over');          // que le agregue arriba en el over
+});
+
+
+
 
 
 

@@ -98,8 +98,22 @@ form button:hover {
   border-radius: 6px;
   padding: 10px;
   margin: 6px 0;
+  user-select: auto;
+  -webkit-user-drag: element; /* Permite drag en navegadores WebKit (Chrome, Safari, etc.) */
   cursor: grab;
   transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.user-card p{
+  max-width: 40%;
+  font-size: small;
+  pointer-events: none; 
+  user-select: none;
+}
+
+.user-card h4{
+  pointer-events: none;
+  user-select: none;
 }
 
 .user-card:hover {
@@ -110,6 +124,11 @@ form button:hover {
 .user-card:active {
   cursor: grabbing;
   background: #cce0ff;
+}
+
+.user-card.dragging {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 /* --- Info adicional --- */
